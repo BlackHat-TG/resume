@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Multi Step Form | CodingNepal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Font Awesome icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+
+
+ 
+<script>
+      function ValidateFields() {
+          if (document.getElementById('post').value == "" && document.getElementById('dep').value == ""){
+            alert('Please select all the details');
+          document.getElementById('post').style.borderColor="red";
+          document.getElementById('dep').style.borderColor="red";
+          return false;}
+          else if (document.getElementById('pos').value == ""){
+            alert('Please select your Post');
+          document.getElementById('post').style.borderColor="red";
+          return false;}
+          else if (document.getElementById('dep').value == ""){
+            alert('Please enter your Department');
+          document.getElementById('dep').style.borderColor="red";
+          return false;}
+        return true;
+    }
+</script>
+<script></script>
+
+
+
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+    
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a4b7d1; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: url("bg.png"), -webkit-linear-gradient(bottom,#F0FFFF,#B0C4DE);
+}
+::selection{
+  color: #fff;
+  background: #a4b7d1;
+}
+.align{
+  right: 500px;
+}
+.container{
+  width: 700px;
+  height: 100%;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 50px 35px 10px 35px;
+}
+.container header{
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  width: 800px;
+  height: 45px;
+  margin: 45px 0;
+  
+  position: relative;
+}
+form .page .field .label{
+
+  position: absolute;
+  top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  
+}
+form .page .field input{
+
+  height: 100%;
+  width: 500px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #a4b7d1;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+.btn-next{
+  width: 100%;
+  height: calc(100%);
+  border: none;
+  background: #a4b7d1;
+  margin-top: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  position: relative;
+  left: -20px;
+  bottom: 10px;
+  text-align: center;
+  padding-top: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 12px;
+  text-decoration: none;
+
+}
+.btn-next:hover{
+  background: #000;
+  text-decoration: none;
+  color:#fff;
+}
+
+.btn-next2 {
+  width: 100%;
+  height: calc(100%);
+  border: none;
+  background: #a4b7d1;
+  margin-top: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  position: relative;
+  text-align: center;
+  padding-top: 12px;
+  bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 12px;
+  text-decoration: none;
+
+}
+.btn-next2:hover{
+  background: #000;
+  text-decoration: none;
+  color:#fff;
+}
+
+form .page .field1 input{
+  height: 100%;
+  width: 500px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  position: relative;
+
+}
+form .page .field1 select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field1 button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #a4b7d1;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  position: relative;
+  right: -200px;
+}
+form .page .field1 button:hover{
+  background: #000;
+
+
+
+
+
+
+
+
+.form-outer form .page .field2{
+  width: 600px;
+  height: 45px;
+  margin: 45px 0;
+  position: relative;
+}
+
+form .page .field2 .label{
+
+  position: absolute;
+  top: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  
+}
+form .page .field2 input{
+
+  height: 100%;
+  width: 415px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 18px;
+  float: right;
+  position: relative;
+  left: 55px;
+}
+form .page .field2 select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field2 button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #a4b7d1;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field2 button:hover{
+  background: #000;
+}
+
+form .page .btns button{
+  margin-top: -20px!important;
+}
+form .page .btns button.prev{
+  margin-right: 3px;
+  font-size: 17px;
+}
+form .page .btns button.next{
+  margin-left: 3px;
+}
+
+.container .progress-bar{
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+}
+.container .progress-bar .step{
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p{
+  font-weight: 500;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+  border-color: #a4b7d1;
+  background: #a4b7d1;
+}
+.progress-bar .step .bullet span{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+  position: absolute;
+  content: '';
+  bottom: 11px;
+  right: -145px;
+  height: 3px;
+  width: 140px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+  background: #a4b7d1;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+  display: none;
+}
+.progress-bar .step p.active{
+  color: #a4b7d1;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check{
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.progress-bar .step .check.active{
+  display: block;
+  color: #fff;
+}
+  </style>
+  <body>
+    <div class="container">
+      <header>Upload CV</header>
+      
+
+
+<div class="form mt-5 ml-5 pl-5" style="position: relative;left: -10px;">
+    <div class="btn  float-left" style="background-color:black;color:white;position: relative;right: 60px;">  
+      <input type="file">
+    </div>
+    <div class="wrapper">
+        <i class="fas fa-cloud-upload-alt fa-lg ml-5 grey-text" style="position: relative;right: -40px;" aria-hidden="true" ></i>&nbsp;&nbsp;
+      <input class="file-path validate my-3 " type="text" style="border:none;position: relative;top:-35px;left:-50px;width: 150px;" placeholder="Upload your file ..."  >
+    </div>
+</div>
+<br><br>
+
+        <div class="field1 btns">
+          <a href="/select_post" class="btn-next" >Previous</a> 
+          <a href="/technical_info" class="btn-next2" onclick="">Next</a>
+          <br><br>
+        </div>
+  </div>
+  </body>
+</html>

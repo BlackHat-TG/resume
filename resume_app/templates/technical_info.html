@@ -1,0 +1,312 @@
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+<style type="text/css">
+
+  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+  :root {
+  --box-height: 40px;
+  --border-radius: 5px;
+  --space-between: 20px;
+  --font-size: 16px;
+
+  --color-0: #ffffff;
+  --color-1: #dcdcdd;
+  --color-2: #c5c3c6;
+  --color-3: #212529;
+  --color-4: #659b5e;
+  --color-5: #ce4257;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  padding: 0 10px;
+  background: url("bg.png"), -webkit-linear-gradient(bottom,#F0FFFF,#B0C4DE);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+#survey-container {
+  margin: 20px auto;
+  padding: 30px 20px;
+  background: #ffffff;
+  width: 700px;
+}
+
+#title {
+  margin: 30px 0;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 50px;
+  text-transform: capitalize;
+  color: var(--color-3);
+}
+
+#description {
+  margin: 30px 0;
+  padding: 5px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-3);
+}
+
+#survey-form {
+  padding: 30px;
+  padding-top: 20px;
+  background: #ffffff;
+  opacity: 98%
+  border: none;
+
+
+}
+
+#survey-form * {
+  font-size: var(--font-size);
+}
+
+.row-label,
+.row-input {
+  padding: 5px 10px;
+  margin: 0;
+  height: var(--box-height);
+  width: 100%;
+  display: block;
+}
+
+.row-label {
+  color: var(--color-3);
+  font-weight: 600;
+}
+
+.row-label:not(:first-child) {
+  margin-top: var(--space-between);
+}
+
+.row-input:not(.small) {
+  background: white;
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.inline-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: var(--color-3);
+}
+
+.small {
+  height: calc(var(--box-height) * 0.75);
+}
+
+#comments {
+  padding: 10px;
+  margin: 0;
+  height: 120px;
+  width: 100%;
+  background: white;
+  border: none;
+  border-radius: var(--border-radius);
+  resize: none;
+}
+
+#submit {
+  margin-top: calc(2 * var(--space-between));
+  height: var(--box-height);
+  width: 100%;
+  background: var(--color-4);
+  border: none;
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+#submit:hover {
+  box-shadow: 0 0 2px var(--color-3);
+}
+
+.form-outer form .page .field{
+  width: 800px;
+  height: 45px;
+  margin: 45px 0;
+
+}
+form .page .field .label{
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+
+}
+form .page .field input{
+
+  height: 100%;
+  width: 300px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 14px;
+  position: relative;
+  left:-240px;
+}
+form .page .field select{
+  width: 100%;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 500;
+}
+form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  border: none;
+  background: #a4b7d1;
+  margin-top: -20px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover{
+  background: #000;
+}
+
+.btn {
+  width: 50%;
+  
+  border: none;
+  background: #a4b7d1;
+  margin-top: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+  position: relative;
+  left: 180px;
+  bottom: 750px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  float: left;
+  border-spacing: 50px;
+}
+.btn:hover{
+  background: #000;
+}
+.required {
+  color: red;
+}
+
+
+
+</style>
+<div id="survey-container">
+
+  <h1 id="title">Job form</h1>
+
+  <p id="description">Fill in to apply</p>
+
+  <form id="survey-form">
+
+    <!-- name -->
+    <label id="name-label" class="row-label" for="name">10th Marks (in CGPA or Percentage)<span class="required">*</span></label>
+    <input id="name" class="row-input" type="text" placeholder="Enter 10th Marks" style="position: relative;width:300px;border: 1px solid lightgrey;" required>
+
+    <!-- email -->
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-110px;right: -350px;">Year of Passing 10th<span class="required">*</span></label> 
+    <input id="email" class="row-input" type="month" style="position: relative;width:300px;border: 1px solid lightgrey;top:-110px;right: -350px;" placeholder="" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-100px;">12th Marks (in Percentage)<span class="required">*</span></label> 
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top: -100px" placeholder="Enter 12th Marks" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-210px;right: -350px;">Year of Passing 12th<span class="required">*</span></label>
+    <input id="email" class="row-input" type="month" style="position: relative;width:300px;border: 1px solid lightgrey;top:-210px;right: -350px;" placeholder="" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-200px;">UG Degree<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top: -200px" placeholder="Enter UG Degree" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-310px;right: -350px;">UG University<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top:-310px;right: -350px;" placeholder="Enter UG University" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-300px;">UG Area Specialization<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;border: 1px solid lightgrey;top: -300px" placeholder="Enter UG Area of Specialization" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-300px;">UG Percentage<span class="required">*</span></label>
+    <input id="email" class="row-input" type="number" style="position: relative;width:300px;border: 1px solid lightgrey;top: -300px;" placeholder="Enter UG Percentage" required>
+
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-410px;right: -350px;">Year of Passing UG<span class="required">*</span></label>
+    <input id="email" class="row-input" type="month" style="position: relative;width:300px;border: 1px solid lightgrey;top:-410px;right: -350px;" placeholder="Enter year of Passing UG" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-400px;">PG Degree<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top: -400px" placeholder="Enter PG Degree" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-510px;right: -350px;">PG University<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top:-510px;right: -350px;" placeholder="Enter PG University" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-500px;">PG Area of Specialization<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;border: 1px solid lightgrey;top: -500px" placeholder="Enter PG Area of Specialization" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-500px;">PG Percentage<span class="required">*</span></label>
+    <input id="email" class="row-input" type="number" style="position: relative;width:300px;border: 1px solid lightgrey;top: -500px;" placeholder="Enter PG Percentage" required>
+
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-610px;right: -350px;">Year of Passing PG<span class="required">*</span></label>
+    <input id="email" class="row-input" type="month" style="position: relative;width:300px;border: 1px solid lightgrey;top:-610px;right: -350px;" placeholder="" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-600px;">PhD University<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;width:300px;border: 1px solid lightgrey;top: -600px;" placeholder="Enter PhD University" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-710px;right: -350px;">Year of Enrollment<span class="required">*</span></label>
+    <input id="email" class="row-input" type="month" style="position: relative;width:300px;border: 1px solid lightgrey;top:-710px;right: -350px;" placeholder="Enter year of Enrollment" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-700px;">PhD Area of Specialization<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" style="position: relative;border: 1px solid lightgrey;top: -700px;" placeholder="Enter PhD Area of Specialization" required>
+
+    <!-- education dropdown -->
+    <label class="row-label" for="dropdown" style="position: relative;top: -700px">phD Status<span class="required">*</span></label>
+    <select id="dropdown" class="row-input" style="width: 300px;border: 1px solid lightgrey;position:relative;top:-700px;" required>
+      <option disabled selected>Select an option</option>
+      <option value="primary">Ongoing</option>
+      <option value="secondary">Completed</option>
+      <option value="higher">Others</option>
+    </select>
+    <input id="email" class="row-input" type="text" style="position: relative;border: 1px solid lightgrey;top: -700px;top:-680px;" placeholder="If others please specify" required>
+
+    <label class="row-input small" for="4k-5k" style="position: relative;left:350px;top:-780px;"><span class="required">*</span>
+      <input type="radio" id="4k-5k" name="radio" value="4k-5k">
+      <span class="inline-label">Part-time</span>
+      <input type="radio" id="4k-5k" name="radio" value="4k-5k" style="position: relative;left:35px;">
+      <span class="inline-label" style="position: relative;left:30px;">Full time</span>
+    </label>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-700px;">Total Work Experience<span class="required">*</span></label>
+    <input id="email" class="row-input" type="number" placeholder="Enter Total Work Experience" style="position: relative;width:300px;border: 1px solid lightgrey;top: -700px;" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;width:300px;top:-810px;right: -350px;">Teaching Work Experience<span class="required">*</span></label>
+    <input id="email" class="row-input" type="number" placeholder="Enter Teaching Work Experience" style="position: relative;width:300px;border: 1px solid lightgrey;top:-810px;right: -350px;" required>
+
+    <label id="email-label" class="row-label" for="email" style="position: relative;top:-810px;">Skill Set<span class="required">*</span></label>
+    <input id="email" class="row-input" type="text" placeholder="Enter your skills (seperate by commas)" style="padding-top: 0px;text-align:left;position: relative;border: 1px solid lightgrey;top:-810px;height: 150px;" required>
+    <!-- submit button -->
+     <a href="/upload_cv" class="btn" style="position: relative;left:100px;width: 200px;">Previous</a>
+    <a href="/success" class="btn" style="position: relative;left:130px;width: 200px;">Submit</a>
+
+  </form>
+
+</div>
